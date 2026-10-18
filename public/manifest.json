@@ -2,13 +2,13 @@
   "name": "IdroCondotta VVF - Staffette Antincendio",
   "short_name": "IdroCondotta",
   "description": "Applicativo per il calcolo idraulico e verifica di condotte per vigili del fuoco e AIB",
-  "start_url": "/",
+  "start_url": ".",
   "display": "standalone",
   "background_color": "#020617",
   "theme_color": "#b91c1c",
   "icons": [
     {
-      "src": "/fire-hydrant.svg",
+      "src": "fire-hydrant.svg",
       "sizes": "192x192 512x512",
       "type": "image/svg+xml"
     }
