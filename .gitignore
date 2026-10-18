@@ -1,0 +1,21 @@
+# Dipendenze
+node_modules/
+
+# Build
+dist/
+*.tsbuildinfo
+
+# Ambiente locale
+.env
+.env.*
+*.local
+
+# Cartelle di verifica temporanee
+__verify__/
+__gen__/
+
+# Editor / sistema
+.vscode/
+.idea/
+.DS_Store
+Thumbs.db

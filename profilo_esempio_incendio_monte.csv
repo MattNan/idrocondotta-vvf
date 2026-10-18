@@ -1,0 +1,10 @@
+Distanza_Reale,Quota_Z,Elemento,Tipo_Pompa,Modalita_Pompa,Altezza_Aspirazione,Note
+0,420,start,,,,"Presa idrica da autobotte (6.0 bar)"
+105,445,pipe,,,,
+235,480,pipe,,,,
+370,515,pump,pump-8-8,direct,0,"Piazzola tornante - Motopompa 8/8 in diretta"
+510,550,pipe,,,,
+690,585,vascone,,,,"Vascone AIB di sosta 10.000 litri a pelo libero"
+695,587,pump,pump-12-10,vascone_suction,2.0,"Motopompa 12/10 aspirazione da vascone (H_asp = 2m)"
+830,615,pipe,,,,
+960,640,end,,,,"Lancia UNI 70 su fronte fiamma"
