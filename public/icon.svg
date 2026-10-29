@@ -1,0 +1,12 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" width="512" height="512">
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#dc2626"/>
+      <stop offset="1" stop-color="#7f1d1d"/>
+    </linearGradient>
+  </defs>
+  <!-- Icona app: fondo pieno (regge anche il ritaglio "maskable"), goccia bianca -->
+  <rect width="512" height="512" fill="url(#bg)"/>
+  <path d="M256 104c0 0-112 124-112 208a112 112 0 0 0 224 0c0-84-112-208-112-208z" fill="#ffffff"/>
+  <path d="M206 318a50 50 0 0 0 50 50" fill="none" stroke="#b91c1c" stroke-width="20" stroke-linecap="round"/>
+</svg>

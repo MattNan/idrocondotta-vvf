@@ -3,6 +3,7 @@ node_modules/
 
 # Build
 dist/
+dist-portatile/
 *.tsbuildinfo
 
 # Ambiente locale

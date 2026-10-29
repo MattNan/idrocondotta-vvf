@@ -43,6 +43,20 @@
     break-inside: avoid;
   }
 
+  /* Grafico del report: il canvas è disegnato a 703 × 300 px (larghezza utile
+     A4) e qui viene portato al 100% della pagina, mantenendo le proporzioni.
+     Su telefono il grafico a schermo resta largo quanto lo schermo, quindi
+     senza questa regola in stampa usciva stretto al centro del foglio. */
+  .print-chart {
+    break-inside: avoid;
+  }
+
+  .print-chart canvas {
+    width: 100% !important;
+    height: auto !important;
+    aspect-ratio: 703 / 300;
+  }
+
   thead {
     display: table-header-group;
   }

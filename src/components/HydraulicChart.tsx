@@ -12,6 +12,12 @@ interface HydraulicChartProps {
   onSelectStation?: (stationM: number) => void;
   /** Variante chiara, per il report stampabile su carta bianca. */
   variant?: 'dark' | 'light';
+  /**
+   * Dimensioni fisse del canvas (px CSS), usate dalla copia del grafico che
+   * esiste solo per la stampa: il report la disegna a misura di foglio A4 e la
+   * adatta alla larghezza della pagina, così in PDF non resta più stretta.
+   */
+  fixedSize?: { width: number; height: number };
 }
 
 type PiezoRole = 'node' | 'inlet' | 'outlet' | 'crossing' | 'freeSurface';
@@ -30,7 +36,8 @@ export const HydraulicChart: React.FC<HydraulicChartProps> = ({
   result,
   config,
   onSelectStation,
-  variant = 'dark'
+  variant = 'dark',
+  fixedSize
 }) => {
   const points = result.points;
   const light = variant === 'light';
@@ -275,11 +282,13 @@ export const HydraulicChart: React.FC<HydraulicChartProps> = ({
   }, [points, config]);
 
   const options: any = {
-    responsive: true,
+    responsive: !fixedSize,
     maintainAspectRatio: false,
-    animation: {
-      duration: 250
-    },
+    animation: fixedSize
+      ? false
+      : {
+          duration: 250
+        },
     interaction: {
       mode: 'nearest',
       axis: 'x',
@@ -452,8 +461,17 @@ export const HydraulicChart: React.FC<HydraulicChartProps> = ({
           </span>
         </div>
       </div>
-      <div className="relative flex-1 min-h-[360px] w-full">
-        <Line data={chartData} options={options} />
+      <div
+        className={
+          fixedSize ? 'relative w-full' : 'relative flex-1 min-h-[360px] w-full'
+        }
+      >
+        <Line
+          data={chartData}
+          options={options}
+          width={fixedSize?.width}
+          height={fixedSize?.height}
+        />
       </div>
     </div>
   );

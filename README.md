@@ -4,6 +4,8 @@ App web per il **calcolo e la verifica delle staffette idrauliche** (condotte) d
 
 Nata per l'uso in campo: interfaccia **mobile-first**, in italiano, con report stampabile in PDF da allegare al rapporto d'intervento.
 
+**App online: <https://mattnan.github.io/idrocondotta-vvf/>** — si apre dal telefono e con "Aggiungi a schermata Home" diventa un'app a sé. Dopo la prima apertura **funziona anche senza rete**: il service worker tiene in cache tutta l'applicazione (montagna, zone bianche).
+
 ## Funzioni principali
 
 - **Profilo plano-altimetrico**: inserimento manuale dei punti, importazione da CSV/Excel, rilievo GPS live con mappa del percorso.
@@ -13,7 +15,8 @@ Nata per l'uso in campo: interfaccia **mobile-first**, in italiano, con report s
 - **Manichette**: conteggio rotoli (spezzone 20 m o 30 m) per tratto fra peli liberi e per macchina.
 - **Piezometrica e curva di impianto**: portata che l'impianto riesce davvero a muovere, prevalenza richiesta, margine alla lancia.
 - **Sicurezza**: registro allarmi (pressione alta, scoppio manichetta, depressione/collasso, pressione insufficiente) con consigli operativi di posa.
-- **Report stampabile** con tabella macchine, manichette, KPI e grafico.
+- **Report stampabile** con tabella macchine, manichette, KPI e grafico a misura di foglio A4.
+- **Offline (PWA)**: installabile sulla schermata Home, funziona senza connessione dopo la prima apertura.
 - **Scenari di esempio**: incendio boschivo a staffetta mista, rifornimento da fiume a grande portata, linea su colle, relay reale a 7 motopompe su 2,5 km.
 
 ## Avvio

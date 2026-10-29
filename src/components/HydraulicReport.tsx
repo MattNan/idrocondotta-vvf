@@ -185,8 +185,20 @@ export const HydraulicReport: React.FC<HydraulicReportProps> = ({
           <h2 className="text-sm font-bold uppercase tracking-wide border-b border-slate-300 pb-1">
             1 · Profilo altimetrico e linea piezometrica
           </h2>
-          <div className="h-[400px] w-full">
+          <div className="h-[400px] w-full print:hidden">
             <HydraulicChart result={result} config={config} variant="light" />
+          </div>
+          {/* Copia solo stampa: canvas disegnato a misura di foglio (703 × 300 px
+              CSS = 186 mm di larghezza utile A4) e poi adattato alla pagina.
+              A schermo il grafico è largo quanto lo schermo del telefono; senza
+              questa copia in PDF resterebbe stretto al centro del foglio. */}
+          <div className="print-chart hidden print:block">
+            <HydraulicChart
+              result={result}
+              config={config}
+              variant="light"
+              fixedSize={{ width: 703, height: 300 }}
+            />
           </div>
         </section>
 
